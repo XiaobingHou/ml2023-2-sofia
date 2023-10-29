@@ -1,0 +1,14 @@
+N = int(input("Enter N (a positive integer): "))
+numbers = []
+
+for i in range(N):
+    num = int(input(f"Enter the {i + 1}th number: "))
+    numbers.append(num)
+
+X = int(input("Enter X (an integer): "))
+
+if X in numbers:
+    index = numbers.index(X) + 1
+    print(f"The index of X is: {index}")
+else:
+    print("-1")
