@@ -1,0 +1,25 @@
+class NumberList:  
+    def __init__(self):  
+        self.numbers = []  
+  
+    def insert_number(self):  
+        number = int(input("Enter a number: "))  
+        self.numbers.append(number)  
+  
+    def search_number(self, x):  
+        if x in self.numbers:  
+            index = self.numbers.index(x) + 1  
+            print(f"Number {x} found at index {index}.")  
+        else:  
+            print(f"Number {x} not found in the list.")  
+  
+def main():  
+    N = int(input("Enter the number of elements in the list: "))  
+    my_list = NumberList()  
+    for _ in range(N):  
+        my_list.insert_number()  
+    X = int(input("Enter a number to search: "))  
+    my_list.search_number(X)  
+  
+if __name__ == "__main__":  
+    main()
